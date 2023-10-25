@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import com.example.demo.model.CityModel;
 import com.example.demo.model.CountryModel;
 import com.example.demo.repository.CountryRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -33,5 +34,8 @@ public class CountryService {
 
     public Optional<CountryModel> getCountryById(Long id) {
         return countryRepository.findById(id);
+    }
+    public Optional<CountryModel> getCountryByName(String name){
+        return countryRepository.findCountryByCountryName(name);
     }
 }

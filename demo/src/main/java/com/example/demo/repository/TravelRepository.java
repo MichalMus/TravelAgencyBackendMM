@@ -59,7 +59,7 @@ public interface TravelRepository extends JpaRepository<TravelModel, Long> {
 
     Optional<TravelModel> findById(Long id);
 
-    void deleteTravelModelByIdIs(Long id);
+    void deleteTravelModelById(Long id);
 
     List<TravelModel> findAllByHotelModel_CityModel_CountryModel_CountryName(String name);
 

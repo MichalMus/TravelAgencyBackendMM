@@ -32,4 +32,7 @@ public class CityService {
     public Optional<CityModel> getCityById(Long id){
         return cityRepository.findById(id);
     }
+    public Optional<CityModel> getCityByName(String name){
+        return cityRepository.findCityByCityName(name);
+    }
 }

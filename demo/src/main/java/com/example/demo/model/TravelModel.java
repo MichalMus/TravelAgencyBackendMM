@@ -53,21 +53,21 @@ public class TravelModel {
     private Byte childrenNumber;
 
     //sprawdzxić wszystko poniżej czy potrzebne, czy dobrze, czy dobra zależność
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private AirportModel start;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private AirportModel destination;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "hotel_model_id")
     private HotelModel hotelModel;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "country_model_id")
     private CountryModel countryModel;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "continent_model_id")
     private ContinentModel continentModel;
 

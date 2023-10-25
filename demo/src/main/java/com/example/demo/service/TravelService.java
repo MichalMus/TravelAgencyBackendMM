@@ -90,7 +90,7 @@ public class TravelService {
     }
 
     public void deleteTravel(Long id){
-        travelRepository.deleteTravelModelByIdIs(id);
+        travelRepository.deleteTravelModelById(id);
     }
 
     public void changeTravelModel(Long id, TravelModel travelModel){

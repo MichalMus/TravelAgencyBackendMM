@@ -27,12 +27,12 @@ public class ContinentModel {
     @Column(name = "continent_name")
     private String continentName;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "continentModel")
-    @JsonIgnore
-    private Set<CountryModel> countryModelList = new HashSet<>();
-
-    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL,mappedBy = "continentModel")
-    @JsonIgnore
-    private Set<TravelModel> travelModelList = new HashSet<>();
+//    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "continentModel")
+//    @JsonIgnore
+//    private Set<CountryModel> countryModelList = new HashSet<>();
+//
+//    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL,mappedBy = "continentModel")
+//    @JsonIgnore
+//    private Set<TravelModel> travelModelList = new HashSet<>();
 
 }

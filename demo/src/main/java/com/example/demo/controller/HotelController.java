@@ -1,26 +1,29 @@
 package com.example.demo.controller;
 
-import com.example.demo.model.ClientsResponse;
-import com.example.demo.model.HotelModel;
-import com.example.demo.model.HotelResponse;
-import com.example.demo.service.HotelService;
+import com.example.demo.model.*;
+import com.example.demo.service.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/hotel")
 public class HotelController {
     private final HotelService hotelService;
+
+
 
     @GetMapping("/{city}")
     public ResponseEntity<List<HotelModel>> getHotelsInCity(@PathVariable("city") String cityName) {
@@ -50,6 +53,7 @@ public class HotelController {
                 .status(HttpStatus.OK)
                 .body(hotelModel);
     }
+
 
     @DeleteMapping("/deleteHotel/{id}")
     public ResponseEntity deleteHotel(@PathVariable("id") Long id) {

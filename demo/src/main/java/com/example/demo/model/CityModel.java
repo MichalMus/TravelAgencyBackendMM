@@ -30,13 +30,13 @@ public class CityModel {
     @JoinColumn(name = "country_id")
     private CountryModel countryModel;
 
-    @OneToMany(fetch = FetchType.LAZY,cascade =CascadeType.ALL,mappedBy = "cityModel")
-    @JsonIgnore
-    private Set<HotelModel> hotels = new HashSet<>();
-
-    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "cityModel")
-    @JsonIgnore
-    private Set<AirportModel> airports = new HashSet<>();
+//    @OneToMany(fetch = FetchType.LAZY,cascade =CascadeType.ALL,mappedBy = "cityModel")
+//    @JsonIgnore
+//    private Set<HotelModel> hotels = new HashSet<>();
+//
+//    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "cityModel")
+//    @JsonIgnore
+//    private Set<AirportModel> airports = new HashSet<>();
 
 
 

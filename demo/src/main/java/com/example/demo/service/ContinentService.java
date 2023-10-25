@@ -37,4 +37,8 @@ public class ContinentService {
     public List<ContinentModel> AllContinents(){
         return continentRepository.findAll();
     }
+
+    public Optional<ContinentModel> getContinentByName(String name){
+        return continentRepository.findContinentByContinentName(name);
+    }
 }

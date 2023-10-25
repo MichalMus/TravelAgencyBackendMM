@@ -30,13 +30,13 @@ public class CountryModel {
     @JoinColumn(name = "continent_id")
     private ContinentModel continentModel;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "countryModel")
-    @JsonIgnore
-    private Set<CityModel> cityModelList = new HashSet<>();
-
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "countryModel")
-    @JsonIgnore
-    private Set<TravelModel> travelModelList = new HashSet<>();
+//    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "countryModel")
+//    @JsonIgnore
+//    private Set<CityModel> cityModelList = new HashSet<>();
+//
+//    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "countryModel")
+//    @JsonIgnore
+//    private Set<TravelModel> travelModelList = new HashSet<>();
 
 
 }
